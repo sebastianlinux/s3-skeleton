@@ -3,29 +3,14 @@
     <head>
         <meta charset="UTF-8">
         <title>My Page Title</title>
-        <link href="assets/css/style.min.css?v=1505928328063" rel="stylesheet" type="text/css">
-        <link href="assets/css/main.min.css?v=1505928328063" rel="stylesheet" type="text/css">
-        <link href="assets/css/other/main.min.css?v=1505928328063" rel="stylesheet" type="text/css">
-        {% if cssBundle() %}
-            <link rel="stylesheet" href="{{ baseUrl ~ '/' ~ cssBundle() | raw }}" rel="stylesheet" type="text/css">        
-        {% endif %}
+        <link rel="stylesheet" href="{{baseUrl}}/css/main.min.css">
     </head>
     <body>        
-        <!-- content -->
-        <div class="content">
-            <div>
-                <h1 id="hello"></h1>
-                <p id="content"></p>
-                <p id="content">1.0</p>
-            </div>
-            {% include 'partials/chat.twig' %}
-        </div>
-        <script src="assets/js/jquery.min.js?v=1505928328063"></script>
-        <script src="assets/js/chat/chat.min.js?v=1505928328063"></script>
-        <script src="assets/js/info.min.js?v=1505928328063"></script>
-        <script src="//localhost:8090/livereload.js"></script> {# DONT REMOVE, this is for livereload, only change your port #}
-        {% if jsBundle() %}
-            <script src="{{ baseUrl ~ '/' ~ jsBundle() | raw }}"></script>
-        {% endif %}
+       <h2>Welcome to slim framework!</h2>
+       <h3>baseUrl: {{baseUrl}}</h3>
+
+
+       <script src="{{baseUrl}}/js/jquery-3.3.1.min.js"></script>
+       <script src="{{baseUrl}}/js/main.js"></script>
     </body>
 </html>
