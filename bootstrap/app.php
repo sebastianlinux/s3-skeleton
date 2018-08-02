@@ -74,7 +74,7 @@ $container['view'] = function ($container) {
 		'cache' => false,
 	]);
 	$uri = explode("/",$container['request']->getUri());
-	$basePath = $uri[0]."//".$uri[2]."/cargaproductoskubbox/public/";
+	$basePath = $uri[0]."//".$uri[2];
 	$view->addExtension( new \Slim\Views\TwigExtension(
 		$container->router,
 		$basePath,
